@@ -1,19 +1,46 @@
-# Getting Started with Create React App
+## Loja-virtual_Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Description
+  This is a react project made using CRA and using the mercado livre api.
+  
+#### In case you want to use the api. [Api link](https://api.mercadolibre.com/sites)
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+### How to use
 
-### `npm start`
+* `npm install`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Open the repository of the api used in this project and read the `README.md`. [Link](https://github.com/Guimpontes/Loja-virtual_Backend)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* Open `.env_exemple` file and rename it to `.env`
 
+* Add vaiables
+
+***For exemple***
+> PORT = "3000"
+>
+> REACT_APP_API_URL = "Use the URL you are hosting the API mentioned above."
+
+* Run the app `npm start`
+
+---
+
+### Tools 
+
+* React
+
+### Libraries
+
+ * React router dom
+ * Axios
+ * Framer motion
+ * React toastfy
+ * React icons
+ * Use context selector
+ 
+ ---
+ 
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
@@ -68,3 +95,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  
