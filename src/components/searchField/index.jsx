@@ -13,7 +13,7 @@ export default function SearchField() {
     const setSearchLoading = useContextSelector(SearchFieldContext, inputSearch => inputSearch.setSearchLoading)
     const [textSearch, setTextSearch] = useState("");
     const { setProductList } = useContext(ProductContext);
-    const { emptyList, setEmptyList } = useContext(ProductContext)
+    const { setEmptyList } = useContext(ProductContext)
     const location = useLocation().pathname;
 
     function searchProduct(e) {

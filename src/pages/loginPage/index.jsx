@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useContext, useEffect, useState } from 'react';
 import { RiLockPasswordFill } from 'react-icons/ri';
 import { HiOutlineMail } from 'react-icons/hi'
@@ -21,6 +22,7 @@ export default function LoginPage() {
     if (logged && loggedUser) {
       navigate(-1)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   function onShowPassword() {
@@ -71,7 +73,7 @@ export default function LoginPage() {
               <input type={showPassword ? "text" : "password"} name="password" id="input_password" onChange={(e) => { updateUser(e) }} value={user.password ? user.password : ""} />
               <button onClick={onShowPassword} type="button" id="show_password-login"><ShowHidePassword showPassword={showPassword} /></button>
             </div>
-
+            
             <a className="forgot-password-link" href="#">Esqueceu a senha?</a>
 
             <div className="field-remember">

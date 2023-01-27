@@ -12,7 +12,6 @@ import Loading from '../loadScreen/index'
 import validateToken from '../../services/validate/validateToken';
 
 export default function ProductItem({ id, title, price, thumbnail, quantity }) {
-
     const [productQuantity, setProductQuantity] = useState(quantity || 1);
     const [quantityCustom, setQuantityCustom] = useState(1);
     const [loading, setLoading] = useState(false);
@@ -22,6 +21,7 @@ export default function ProductItem({ id, title, price, thumbnail, quantity }) {
 
     useEffect(() => {
         calcSubtotal(cart)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     useEffect(() => {
