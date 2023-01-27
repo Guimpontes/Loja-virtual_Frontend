@@ -4,6 +4,7 @@
   <img src="./src/assets/website_preview/home-page-desktop.png" height="350em" align="center" />
   <img src="./src/assets/website_preview/home-page-mobile.png" height="350em"  align="center"/>
 </div>
+&nbsp;
 
 
 ### Description
@@ -41,11 +42,11 @@
 
 ---
 
-### Tools 
+### 🛠️ Tools 
 
 * React
 
-### Libraries
+### 📚 Libraries
 
  * React router dom
  * Axios
