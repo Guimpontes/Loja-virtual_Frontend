@@ -1,5 +1,11 @@
 ## Loja-virtual_Frontend
 
+<div>
+  <img src="./src/assets/site_preview/home-page-desktop.png" height="400em" />
+  <img src="./src/assets/site_preview/home-page-mobile.png" height="400em" />
+</div>
+
+
 ### Description
   This is a react project made using CRA and using the mercado livre api. This project is hosted for free on Netlify.
   If you want to host your website. Take a look at this platform.
