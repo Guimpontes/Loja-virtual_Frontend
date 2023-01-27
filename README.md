@@ -1,9 +1,18 @@
 ## Loja-virtual_Frontend
 
 ### Description
-  This is a react project made using CRA and using the mercado livre api.
+  This is a react project made using CRA and using the mercado livre api. This project is hosted for free on Netlify.
+  If you want to host your website. Take a look at this platform.
   
-#### In case you want to use the api. [Api link](https://api.mercadolibre.com/sites)
+  >Platform: https://www.netlify.com
+  
+&nbsp;
+  
+#### In case you want to use the api.
+
+>API: https://api.mercadolibre.com/sites
+>
+>DOC: https://developers.mercadolivre.com.br/pt_br/api-docs-pt-br
 
 ---
 
