@@ -1,8 +1,8 @@
 ## Loja-virtual_Frontend
 
 <div>
-  <img src="./src/assets/site_preview/home-page-desktop.png" height="350em" align="center" />
-  <img src="./src/assets/site_preview/home-page-mobile.png" height="350em"  align="center"/>
+  <img src="./src/assets/website_preview/home-page-desktop.png" height="350em" align="center" />
+  <img src="./src/assets/website_preview/home-page-mobile.png" height="350em"  align="center"/>
 </div>
 
 
