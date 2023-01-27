@@ -57,6 +57,20 @@
  
  ---
  
+ ### ⚠️ OBS
+ 
+Some features were not implemented in the project. I will make these implementations in the future, but you can feel free, make a copy of the project and make these    implementations. Here is a list of what they are.
+ 
+ * Remember user in login page.
+ 
+ * Forgot password in login page.
+ 
+ * Click on the product and redirect the user to a page with more product information.
+ 
+ * Checkout button on cart page
+ 
+ ---
+ 
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
