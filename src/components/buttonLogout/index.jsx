@@ -20,13 +20,9 @@ export default function ButtonLogout({ id }) {
         setProductSubtotal(0);
         setNewProductNotify(0)
 
-        localStorage.removeItem("logged");
-        localStorage.removeItem("token");
-        localStorage.removeItem("user");
-        localStorage.removeItem("newProductNotify")
+        localStorage.clear()
         navigate("/login", { replace: true })
     }
-
 
     return (
         <button type="button" onClick={logoutUser} id={id}><FiLogOut />SAIR</button>
