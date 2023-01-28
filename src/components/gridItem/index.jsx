@@ -41,7 +41,7 @@ export default function GridItem({ img, title, price, sold, product }) {
                     setShowBtnLoading(false)
                 })
         } else {
-            toast.error("Faça login", { autoClose: 2000 });
+            toast.error("Faça login", { autoClose: 2000, pauseOnHover: false });
 
             setTimeout(() => {
                 navigate("/login")
