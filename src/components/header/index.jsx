@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { BiSearchAlt2 } from 'react-icons/bi';
 import { HiOutlineShoppingCart } from 'react-icons/hi'
+import { BiStoreAlt } from 'react-icons/bi'
 import { FaTimes } from 'react-icons/fa'
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { NavMenuContext } from '../context/navMenuContext';
@@ -44,7 +45,7 @@ export default function Header() {
   return (
     <>
       <header className={location === "/sign-up" ? "" : "scroll"}>
-        <h1 className="brand"><Link to="/">STORE</Link></h1>
+        <h1 className="brand"><Link to="/">GMP STORE <BiStoreAlt /></Link></h1>
 
         <div className="header-btns">
 
