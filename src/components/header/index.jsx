@@ -40,6 +40,10 @@ export default function Header() {
 
   function onShowInputSearch() {
     setShowInputSearch(!showInputSearch);
+
+    if (!showInputSearch) {
+      window.scrollTo({ top: 0, behavior: "smooth" })
+    }
   }
 
   return (
