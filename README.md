@@ -44,6 +44,8 @@
 
 ### 🛠️ Tools 
 
+* Figma
+
 * React
 
 ### 📚 Libraries
