@@ -26,7 +26,7 @@ export default function MyAccount() {
     setShowForm(!showForm)
   }
 
- 
+
 
   function updateUserForm(e) {
     const { name, value } = e.target
@@ -66,15 +66,30 @@ export default function MyAccount() {
             <h2 className={showForm ? "form-title" : "form-title show"}>Minha conta</h2>
 
             <div className="field-name my-account-fields">
-              <input type="text" name="name" placeholder="Nome" onChange={(e) => updateUserForm(e)} value={userForm.name} />
+              <input
+                type="text"
+                name="name"
+                placeholder="Nome"
+                onChange={(e) => updateUserForm(e)} value={userForm.name}
+              />
             </div>
 
             <div className="field-email  my-account-fields">
-              <input type="text" name="email" placeholder="E-mail" onChange={(e) => updateUserForm(e)} value={userForm.email} />
+              <input
+                type="text"
+                name="email"
+                placeholder="E-mail"
+                onChange={(e) => updateUserForm(e)}
+                value={userForm.email}
+              />
             </div>
 
             <div className="field-current-password  my-account-fields">
-              <input type={showPassword ? "text" : "password"} name="current_password" placeholder="Senha atual" onChange={(e) => updateUserForm(e)} value={userForm.current_password} />
+              <input
+                type={showPassword ? "text" : "password"}
+                name="current_password" placeholder="Senha atual"
+                onChange={(e) => updateUserForm(e)} value={userForm.current_password}
+              />
               <button id="show_password-my-account" className="show-password" onClick={onShowPassword} type="button"><ShowHidePassword showPassword={showPassword} /></button>
             </div>
 

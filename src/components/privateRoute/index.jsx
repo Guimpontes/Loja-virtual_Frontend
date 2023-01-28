@@ -3,7 +3,7 @@ import { Context } from '../context/userContext';
 import { BiError } from 'react-icons/bi';
 
 export default function PrivateRoute({ children }) {
-    const { logged} = useContext(Context);
+    const { logged } = useContext(Context);
 
     if (logged) {
         return (children)

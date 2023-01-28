@@ -12,10 +12,10 @@ import validateToken from '../../services/validate/validateToken';
 
 export default function GridItem({ img, title, price, sold, product }) {
     const { cart, setCart } = useContext(CartContext);
-    const { newProductNotify, setNewProductNotify } = useContext(CartContext)
+    const { newProductNotify, setNewProductNotify } = useContext(CartContext);
     const { logged } = useContext(Context);
-    const [showBtnLoading, setShowBtnLoading] = useState(false)
-    const navigate = useNavigate()
+    const [showBtnLoading, setShowBtnLoading] = useState(false);
+    const navigate = useNavigate();
 
     function addProductToCart(product) {
         if (logged) {

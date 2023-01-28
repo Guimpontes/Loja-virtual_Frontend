@@ -4,20 +4,20 @@ import { SearchFieldContext } from '../context/searchFieldContext';
 import { useContextSelector } from 'use-context-selector';
 import { CartContext } from '../context/cartContext';
 import { ProductContext } from '../context/productContext';
+import { Context } from '../context/userContext';
+import { ToastContainer } from 'react-toastify';
 import api from '../../services/api/api';
 import apiProduct from '../../services/api/apiProducts';
 import GridItem from '../gridItem';
 import Loading from '../loadScreen';
 import validateToken from '../../services/validate/validateToken';
-import { Context } from '../context/userContext';
-import { ToastContainer } from 'react-toastify';
 
 export default function GridList() {
     const searchLoading = useContextSelector(SearchFieldContext, inputSearch => inputSearch.searchLoading);
     const [loading, setLoading] = useState(true);
     const { productList, setProductList } = useContext(ProductContext);
     const { setCart } = useContext(CartContext);
-    const { emptyList, setEmptyList } = useContext(ProductContext)
+    const { emptyList, setEmptyList } = useContext(ProductContext);
     const { logged } = useContext(Context);
 
     useEffect(() => {
@@ -48,14 +48,13 @@ export default function GridList() {
                         validateToken(error.response.data.error, logged)
                     });
             }).finally(() => {
-                // REMOVER 
                 setTimeout(() => {
                     setLoading(false)
                 }, 500)
             }
 
             )
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     if (loading || searchLoading) {

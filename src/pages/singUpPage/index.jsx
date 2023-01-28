@@ -48,23 +48,45 @@ export default function SignUpPage() {
                     <div className="form-fields">
                         <div className="input-name fields">
                             <label htmlFor="input_name">Nome</label>
-                            <input type="text" name="name" id="input_name" onChange={(e) => { updateUser(e) }} value={user.name ? user.name : ""} />
+                            <input
+                                type="text"
+                                name="name"
+                                id="input_name"
+                                onChange={(e) => { updateUser(e) }}
+                                value={user.name ? user.name : ""}
+                            />
                         </div>
 
                         <div className="input-email fields">
                             <label htmlFor="input_email">E-mail</label>
-                            <input type="text" name="email" id="input_email" onChange={(e) => { updateUser(e) }} value={user.email ? user.email : ""} />
+                            <input
+                                type="text"
+                                name="email"
+                                id="input_email"
+                                onChange={(e) => { updateUser(e) }}
+                                value={user.email ? user.email : ""}
+                            />
                         </div>
 
                         <div className="input-password fields">
                             <label htmlFor="input_password">Senha</label>
-                            <input type={showPassword ? "text" : "password"} name="password" id="input_password" onChange={(e) => { updateUser(e) }} value={user.password ? user.password : ""} />
+                            <input
+                                type={showPassword ? "text" : "password"}
+                                name="password"
+                                id="input_password"
+                                onChange={(e) => { updateUser(e) }}
+                                value={user.password ? user.password : ""}
+                            />
                             <button onClick={onShowPassword} type="button" id="show_password-sign"><ShowHidePassword showPassword={showPassword} /></button>
                         </div>
 
                         <div className="input-confirm-password fields">
                             <label htmlFor="input_confirm_password">Confirmar senha</label>
-                            <input type={showPassword ? "text" : "password"} name="repeat_password" id="input_confirm_password" onChange={(e) => { updateUser(e) }} value={user.repeat_password ? user.repeat_password : ""} disabled={user.password || user.repeat_password ? false : true} />
+                            <input
+                                type={showPassword ? "text" : "password"}
+                                name="repeat_password" id="input_confirm_password"
+                                onChange={(e) => { updateUser(e) }} value={user.repeat_password ? user.repeat_password : ""}
+                                disabled={user.password || user.repeat_password ? false : true} />
                         </div>
                     </div>
 

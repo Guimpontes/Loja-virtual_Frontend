@@ -65,15 +65,27 @@ export default function LoginPage() {
           <div className="form-fields">
             <div className="input-email fields">
               <label htmlFor="input_email"><HiOutlineMail /> E-mail</label>
-              <input type="email" name="email" id="input_email" onChange={(e) => { updateUser(e) }} value={user.email ? user.email : ""} />
+              <input
+                type="email"
+                name="email"
+                id="input_email"
+                onChange={(e) => { updateUser(e) }}
+                value={user.email ? user.email : ""}
+              />
             </div>
 
             <div className="input-password fields">
               <label htmlFor="input_password"><RiLockPasswordFill />Senha</label>
-              <input type={showPassword ? "text" : "password"} name="password" id="input_password" onChange={(e) => { updateUser(e) }} value={user.password ? user.password : ""} />
+              <input
+                type={showPassword ? "text" : "password"}
+                name="password"
+                id="input_password"
+                onChange={(e) => { updateUser(e) }}
+                value={user.password ? user.password : ""}
+              />
               <button onClick={onShowPassword} type="button" id="show_password-login"><ShowHidePassword showPassword={showPassword} /></button>
             </div>
-            
+
             <a className="forgot-password-link" href="#">Esqueceu a senha?</a>
 
             <div className="field-remember">
