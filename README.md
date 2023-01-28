@@ -61,11 +61,13 @@
  
 Some features were not implemented in the project. I will make these implementations in the future, but you can feel free, make a copy of the project and make these    implementations. Here is a list of what they are.
  
- * Remember user in login page.
+ * Remember user on login page.
  
- * Forgot password in login page.
+ * Forgot password on login page.
  
  * Click on the product and redirect the user to a page with more product information.
+ 
+ * Pagination on home page
  
  * Checkout button on cart page
  
