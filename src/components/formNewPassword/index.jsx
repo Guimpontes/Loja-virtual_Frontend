@@ -6,13 +6,20 @@ import api from '../../services/api/api';
 import validate from '../../services/validate/validate';
 import validateToken from '../../services/validate/validateToken';
 import ShowHidePassword from '../showHidePassword';
+import { IoIosArrowUp } from 'react-icons/io'
 
 export default function FormNewPassword() {
     const initialState = { current_password: "", new_password: "", confirm_new_password: "" };
     const [passwordForm, setPasswordForm] = useState(initialState);
     const [showPassword, setShowPassword] = useState(false);
-    const [showNewPassword, setShowNewPassword] = useState(false)
-    const { logged } = useContext(Context)
+    const [showNewPassword, setShowNewPassword] = useState(false);
+    const [showForm, setShowForm] = useState(false);
+    const { logged } = useContext(Context);
+
+    function onShowForm(e) {
+        e.preventDefault()
+        setShowForm(!showForm)
+    }
 
     function updatePasswordForm(e) {
         const { name, value } = e.target
@@ -43,8 +50,9 @@ export default function FormNewPassword() {
     }
 
     return (
-        <form className="new-password-form" onSubmit={changePassword}>
-            <h2 className="form-title">Senha</h2>
+        <form className={showForm ? "new-password-form show" : "new-password-form"} onSubmit={changePassword}>
+            <button className={showForm ? "btn-show-form show" : "btn-show-form"} onClick={onShowForm}><IoIosArrowUp /></button>
+            <h2 className={showForm ? "form-title" : "form-title show"}>Senha</h2>
 
             <div className="field-current-password  my-account-fields">
                 <input type={showPassword ? "text" : "password"} name="current_password" placeholder="Senha atual" onChange={(e) => updatePasswordForm(e)} value={passwordForm.current_password} />

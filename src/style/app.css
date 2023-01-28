@@ -109,17 +109,14 @@ header.scroll {
 }
 
 .brand {
+    font-family: 'Luckiest Guy', cursive;
     font-size: 1.2rem;
     font-weight: 400;
-}
-
-.brand a {
-    font-family: 'Luckiest Guy', cursive;
     letter-spacing: 2px;
     color: var(--auxiliary-color-two);
     display: flex;
     align-items: center;
-    gap: 5px
+    gap: 5px;
 }
 
 .header-btns {
@@ -473,8 +470,9 @@ header.scroll {
 .my-account-container {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
     gap: 30px;
 }
 
@@ -483,22 +481,49 @@ header.scroll {
 .form-delete-account {
     max-width: 380px;
     width: 100%;
+    height: 80px;
     border-radius: 10px;
     padding: 10px;
     background-color: var(--auxiliary-color-two);
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.4);
     text-align: center;
     justify-self: center;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    position: relative;
 }
 
-.form-delete-account {
-    max-height: 320px;
+.btn-show-form {
+    font-size: 1.5rem;
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    right: 10px;
+    transition: all 0.5s ease;
+}
+
+.btn-show-form.show {
+    transform: rotate(180deg)
+}
+
+.my-account-form.show,
+.new-password-form.show {
+    height: 400px;
+}
+
+.form-delete-account.show {
+    height: 320px;
 }
 
 .form-title {
     font-size: 1.4rem;
     font-weight: 700;
     margin: 30px 0px;
+    transition: all 0.3s ease;
+
+}
+.form-title.show {
+    margin: 20px 0px 30px;
 }
 
 .my-account-fields {
@@ -1156,6 +1181,13 @@ footer {
     .cart-products {
         max-height: 500px;
         overflow: auto;
+    }
+
+    .my-account-container {
+        height: 500px;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 10px;
     }
 }
 

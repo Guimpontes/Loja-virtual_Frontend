@@ -3,11 +3,18 @@ import { getItem } from '../../services/localStorageFunction/localStorageFunctio
 import ShowHidePassword from '../showHidePassword';
 import api from '../../services/api/api'
 import validate from '../../services/validate/validate';
+import { IoIosArrowUp } from 'react-icons/io'
 
 export default function FormDeleteAccount() {
     const initialState = { password: "", email: "" }
     const [showPassword, setShowPassword] = useState(false);
     const [form, setForm] = useState(initialState);
+    const [showForm, setShowForm] = useState(false);
+
+    function onShowForm(e) {
+        e.preventDefault()
+        setShowForm(!showForm)
+    }
 
     function onShowPassword() {
         setShowPassword(!showPassword)
@@ -35,8 +42,10 @@ export default function FormDeleteAccount() {
 
 
     return (
-        <form className="form-delete-account" onSubmit={deleteAccount}>
-            <h2 className="form-title">Excluir conta</h2>
+        <form className={showForm ? "form-delete-account show" : "form-delete-account"} onSubmit={deleteAccount}>
+            <button className={showForm ? "btn-show-form show" : "btn-show-form"} onClick={onShowForm}><IoIosArrowUp /></button>
+
+            <h2 className={showForm ? "form-title" : "form-title show"}>Excluir conta</h2>
 
             <div className="field-password my-account-fields">
                 <input type="text" name="email" placeholder="E-mail" onChange={(e) => updateForm(e)} value={form.email} />

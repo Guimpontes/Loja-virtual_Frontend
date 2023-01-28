@@ -10,6 +10,8 @@ import validate from '../../services/validate/validate';
 import FormNewPassword from '../../components/formNewPassword';
 import validateToken from '../../services/validate/validateToken';
 import FormDeleteAccount from '../../components/formDeleteAccount';
+import { IoIosArrowUp } from 'react-icons/io'
+
 
 export default function MyAccount() {
   const { logged } = useContext(Context);
@@ -17,6 +19,14 @@ export default function MyAccount() {
   const inititalState = { name: loggedUser.name, email: loggedUser.email, current_password: "" };
   const [userForm, setUserForm] = useState(inititalState);
   const [showPassword, setShowPassword] = useState(false);
+  const [showForm, setShowForm] = useState(false);
+
+  function onShowForm(e) {
+    e.preventDefault()
+    setShowForm(!showForm)
+  }
+
+ 
 
   function updateUserForm(e) {
     const { name, value } = e.target
@@ -49,11 +59,11 @@ export default function MyAccount() {
   return (
     <>
       <ToastContainer />
-
       <div className="container">
         <div className="my-account-container">
-          <form className="my-account-form" onSubmit={updateUserData}>
-            <h2 className="form-title">Minha conta</h2>
+          <form className={showForm ? "my-account-form show" : "my-account-form"} onSubmit={updateUserData}>
+            <button className={showForm ? "btn-show-form show" : "btn-show-form"} onClick={onShowForm}><IoIosArrowUp /></button>
+            <h2 className={showForm ? "form-title" : "form-title show"}>Minha conta</h2>
 
             <div className="field-name my-account-fields">
               <input type="text" name="name" placeholder="Nome" onChange={(e) => updateUserForm(e)} value={userForm.name} />

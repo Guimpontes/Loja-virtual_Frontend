@@ -45,7 +45,7 @@ export default function Header() {
   return (
     <>
       <header className={location === "/sign-up" ? "" : "scroll"}>
-        <h1 className="brand"><Link to="/">GMP STORE <BiStoreAlt /></Link></h1>
+        <Link to="/" className="brand">GMP STORE <BiStoreAlt /></Link>
 
         <div className="header-btns">
 
