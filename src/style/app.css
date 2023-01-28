@@ -114,9 +114,10 @@ header.scroll {
     font-weight: 400;
     letter-spacing: 2px;
     color: var(--auxiliary-color-two);
-    display: flex;
-    align-items: center;
-    gap: 5px;
+}
+
+.brand svg {
+    vertical-align: middle;
 }
 
 .header-btns {
@@ -522,6 +523,7 @@ header.scroll {
     transition: all 0.3s ease;
 
 }
+
 .form-title.show {
     margin: 20px 0px 30px;
 }
@@ -1038,9 +1040,10 @@ footer {
     font-weight: 400;
     letter-spacing: 2px;
     color: var(--auxiliary-color-two);
-    display: flex;
-    align-items: center;
-    gap: 5px;
+}
+
+.footer-brand svg {
+    vertical-align: middle;
 }
 
 /*===================== RESPONSIVE ===================== */
