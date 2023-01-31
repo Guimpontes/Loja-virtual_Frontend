@@ -34,7 +34,7 @@ export default function FormDeleteAccount() {
       })
       .then((res) => {
         localStorage.clear();
-        window.location.reload();
+        window.location.replace("/login");
       })
       .catch((error) => {
         console.log(error.response.data);
